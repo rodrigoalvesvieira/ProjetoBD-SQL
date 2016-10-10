@@ -16,6 +16,14 @@ source AVidaEBela.sql
 
 Em caso de erros ou _warnings_ ao gerar o BD. Utilize-se do comando `SHOW ENGINE INNODB STATUS;` e procure por `LATEST FOREIGN KEY ERROR` na mensagem gerada.
 
+###### Importando dados de exemplo
+
+Esse projeto está acompanhado de uma lista de dados de exemplo que pode ser facilmente persistida no banco de dados através do seguinte comando:
+
+```sql
+source Inserts.sql
+```
+
 ## Alunos
 
 * Daniel Sulman de Albuquerque Eloi
