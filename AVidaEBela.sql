@@ -147,6 +147,19 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `avidaebela`.`Usuarios`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `avidaebela`.`Usuarios` ;
+
+CREATE TABLE IF NOT EXISTS `avidaebela`.`Usuarios` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `login` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(255) NOT NULL, -- TODO: HASH!
+  `admin` BOOLEAN NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
 -- Table `avidaebela`.`Utilizacoes`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `avidaebela`.`Utilizacoes` ;
