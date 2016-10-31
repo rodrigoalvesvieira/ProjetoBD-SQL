@@ -12,6 +12,16 @@ Para realizar a criação do banco, basta entrar no console do MySQL e importar 
 source AVidaEBela.sql
 ```
 
+###### Setup de um usuário e suas permissões
+
+```sql
+CREATE USER 'avidaebela'@'localhost' IDENTIFIED BY 'querobrownie';
+
+GRANT ALL ON my_db.* TO 'new_user'@'localhost';
+
+FLUSH PRIVILEGES;
+```
+
 ###### Debugando problemas com chaves estrangeiras
 
 Em caso de erros ou _warnings_ ao gerar o BD. Utilize-se do comando `SHOW ENGINE INNODB STATUS;` e procure por `LATEST FOREIGN KEY ERROR` na mensagem gerada.
