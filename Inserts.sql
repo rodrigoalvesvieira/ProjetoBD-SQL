@@ -6,7 +6,7 @@ INSERT INTO Produto (nome, descricao, preco, criado_em, atualizado_em) VALUES ('
 INSERT INTO Produto (nome, descricao, preco, criado_em, atualizado_em) VALUES ('Mocaccino', 'Cafe, leite, canela, chocolate', 19.90,  NOW(), NOW());
 INSERT INTO Produto (nome, descricao, preco, criado_em, atualizado_em) VALUES ('Cafe com Leite', 'Cafe com leite', 9.90,  NOW(), NOW());
 INSERT INTO Produto (nome, descricao, preco, criado_em, atualizado_em) VALUES ('Café Puro', 'Cafe Puro', 5.90, NOW(), NOW());
-INSERT INTO Produto (nome, descricao, preco, criado_em, atualizado_em) VALUES ('Biscoito', 'Biscoito recheado', 5.90, NOW(), NOW());
+INSERT INTO Produto (nome, descricao, preco, criado_em, atualizado_em) VALUES ('Biscoito Recheado', 'Biscoito recheado de chocolate', 5.90, NOW(), NOW());
 INSERT INTO Produto (nome, descricao, preco, criado_em, atualizado_em) VALUES ('Chocolate Quente', 'Chocolate Quente', 10.90, NOW(), NOW());
 
 
@@ -49,25 +49,50 @@ INSERT INTO Pedido (observacao, criado_em, atualizado_em, conta, produto) VALUES
 INSERT INTO Pedido (observacao, criado_em, atualizado_em, conta, produto) VALUES ('', NOW(), NOW(), 1, 4);
 
 -- Estoque
-INSERT INTO Estoque (qtdItem, transacao, produto) VALUES (30, 2, 1);
-INSERT INTO Estoque (qtdItem, transacao, produto) VALUES (20, 3, 2);
-INSERT INTO Estoque (qtdItem, transacao, produto) VALUES (30, 4, 3);
-INSERT INTO Estoque (qtdItem, transacao, produto) VALUES (20, 5, 4);
-INSERT INTO Estoque (qtdItem, transacao, produto) VALUES (40, 6, 5);
-INSERT INTO Estoque (qtdItem, transacao, produto) VALUES (20, 7, 6);
-INSERT INTO Estoque (qtdItem, transacao, produto) VALUES (10, 8, 7);
-INSERT INTO Estoque (qtdItem, transacao, produto) VALUES (50, 9, 2);
-INSERT INTO Estoque (qtdItem, transacao, produto) VALUES (20, 10,3);
-INSERT INTO Estoque (qtdItem, transacao, produto) VALUES (10, 1, 1);
+INSERT INTO Estoque (qtdItem, transacao, produto_id) VALUES (30, 2, 1);
+INSERT INTO Estoque (qtdItem, transacao, produto_id) VALUES (20, 3, 2);
+INSERT INTO Estoque (qtdItem, transacao, produto_id) VALUES (30, 4, 3);
+INSERT INTO Estoque (qtdItem, transacao, produto_id) VALUES (20, 5, 4);
+INSERT INTO Estoque (qtdItem, transacao, produto_id) VALUES (40, 6, 5);
+INSERT INTO Estoque (qtdItem, transacao, produto_id) VALUES (20, 7, 6);
+INSERT INTO Estoque (qtdItem, transacao, produto_id) VALUES (10, 8, 7);
+INSERT INTO Estoque (qtdItem, transacao, produto_id) VALUES (50, 9, 2);
+INSERT INTO Estoque (qtdItem, transacao, produto_id) VALUES (20, 10,3);
+INSERT INTO Estoque (qtdItem, transacao, produto_id) VALUES (10, 1, 1);
 
 -- Item
--- INSERT INTO Item (nome, limiar, prazo_validade, criado_em, atualizado_em, estoque) VALUES ()
-
-
-
-
+INSERT INTO Item (nome, limiar, prazo_validade, criado_em, atualizado_em, estoque) VALUES ('Café', 2, NULL, NOW(), NOW(),1);
+INSERT INTO Item (nome, limiar, prazo_validade, criado_em, atualizado_em, estoque) VALUES ('Leite', 4, NULL, NOW(), NOW(),2);
+INSERT INTO Item (nome, limiar, prazo_validade, criado_em, atualizado_em, estoque) VALUES ('Biscoito', 5, NULL, NOW(), NOW(),3);
+INSERT INTO Item (nome, limiar, prazo_validade, criado_em, atualizado_em, estoque) VALUES ('Açucar', 6, NULL, NOW(), NOW(),4);
+INSERT INTO Item (nome, limiar, prazo_validade, criado_em, atualizado_em, estoque) VALUES ('Chocolate', 7, NULL, NOW(), NOW(),5);
+INSERT INTO Item (nome, limiar, prazo_validade, criado_em, atualizado_em, estoque) VALUES ('Farinha de trigo', 8, NULL, NOW(), NOW(),6);
+INSERT INTO Item (nome, limiar, prazo_validade, criado_em, atualizado_em, estoque) VALUES ('Coca-Cola', 9, NULL, NOW(), NOW(),7);
+INSERT INTO Item (nome, limiar, prazo_validade, criado_em, atualizado_em, estoque) VALUES ('Agua', 1, NULL, NOW(), NOW(),8);
+INSERT INTO Item (nome, limiar, prazo_validade, criado_em, atualizado_em, estoque) VALUES ('Canela', 3, NULL, NOW(), NOW(),9);
+INSERT INTO Item (nome, limiar, prazo_validade, criado_em, atualizado_em, estoque) VALUES ('Ovomaltine', 10, NULL, NOW(),NOW(),10);
 
 -- Receitas
+INSERT INTO Receitas (produto, item) VALUES (1,3);
+INSERT INTO Receitas (produto, item) VALUES (2,4);
+INSERT INTO Receitas (produto, item) VALUES (2,1);
+INSERT INTO Receitas (produto, item) VALUES (2,9);
+INSERT INTO Receitas (produto, item) VALUES (3,4);
+INSERT INTO Receitas (produto, item) VALUES (5,4);
+INSERT INTO Receitas (produto, item) VALUES (5,1);
+INSERT INTO Receitas (produto, item) VALUES (5,9);
+INSERT INTO Receitas (produto, item) VALUES (5,3);
+INSERT INTO Receitas (produto, item) VALUES (5,5);
 
 
 -- Utilizacoes
+INSERT INTO Utilizacoes (produto, estoque) VALUES(1, 2);
+INSERT INTO Utilizacoes (produto, estoque) VALUES(2, 3);
+INSERT INTO Utilizacoes (produto, estoque) VALUES(3, 4);
+INSERT INTO Utilizacoes (produto, estoque) VALUES(4, 5);
+INSERT INTO Utilizacoes (produto, estoque) VALUES(5, 6);
+INSERT INTO Utilizacoes (produto, estoque) VALUES(6, 7);
+INSERT INTO Utilizacoes (produto, estoque) VALUES(7, 8);
+INSERT INTO Utilizacoes (produto, estoque) VALUES(1, 9);
+INSERT INTO Utilizacoes (produto, estoque) VALUES(2, 1);
+INSERT INTO Utilizacoes (produto, estoque) VALUES(3, 7);
