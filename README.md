@@ -16,8 +16,7 @@ source AVidaEBela.sql
 
 ```sql
 CREATE USER 'avidaebela'@'localhost' IDENTIFIED BY 'querobrownie';
-
-GRANT ALL ON my_db.* TO 'new_user'@'localhost';
+GRANT ALL PRIVILEGES ON mydb.* TO 'avidaebela'@'localhost' WITH GRANT OPTION;
 
 FLUSH PRIVILEGES;
 ```
